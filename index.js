@@ -39,6 +39,9 @@ app.use("/api/v1/clients", clientRoutes);
 
 const helperRoutes = require("./routes/helperRoutes.js");
 app.use("/api/v1/helpers", helperRoutes);
+const clientHelperRoutes = require("./routes/matchingRoutes.js");
+app.use("/api/v1/client-helpers", clientHelperRoutes);
+
 app.get("/", (req, res) => {
   res
     .status(StatusCodes.OK)
