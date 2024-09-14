@@ -1,2 +1,9 @@
+# dependencies
+/node_modules
+
+#Environments
 .env
-./node_modules
+
+.npmrc
+/.vscode
+!/.vscode/settings.json

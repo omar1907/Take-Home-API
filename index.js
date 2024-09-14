@@ -33,6 +33,12 @@ app.use(express.urlencoded({ extended: true }));
 //Swagger Initialization
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+//Routes
+const clientRoutes = require("./routes/clientRoutes.js");
+app.use("/api/v1/clients", clientRoutes);
+
+const helperRoutes = require("./routes/helperRoutes.js");
+app.use("/api/v1/helpers", helperRoutes);
 app.get("/", (req, res) => {
   res
     .status(StatusCodes.OK)
